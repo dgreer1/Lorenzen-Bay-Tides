@@ -26,4 +26,6 @@ The development and production build scripts regenerate the forecast data under 
 
 ## GitHub Pages
 
+Published site: <https://dgreer1.github.io/Lorenzen-Bay-Tides/>.
+
 `.github/workflows/pages.yml` builds and deploys the site on pushes to `main`, and refreshes the rolling forecast daily. It also supports manual runs. Enable **Settings → Pages → Build and deployment → GitHub Actions** once in the repository settings. After that, a push to `main` publishes the site.

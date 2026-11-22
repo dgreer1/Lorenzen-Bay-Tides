@@ -79,7 +79,7 @@ def fit_model(times: list[datetime], levels: list[float]):
         np.asarray(levels, dtype=float),
         lat=LATITUDE,
         method="ols",
-        conf_int="linear",
+        conf_int="none",
         constit="auto",
         trend=False,
         phase="Greenwich",
