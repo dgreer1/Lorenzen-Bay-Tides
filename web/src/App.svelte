@@ -112,7 +112,7 @@
   let manifest: Manifest | undefined;
   let events: TideEvent[] = [];
   let selectedDay = todayInRaglan();
-  let daysToShow = 1;
+  let daysToShow = 3;
   let loading = true;
   let errorMessage = "";
   let visiblePoints: Point[] = [];
