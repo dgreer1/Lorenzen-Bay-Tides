@@ -1,0 +1,498 @@
+:root {
+  font-family: "Segoe UI", "Aptos", sans-serif;
+  color: #17333d;
+  background: #edf4f3;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  background:
+    radial-gradient(ellipse at 82% -15%, rgba(119, 191, 181, 0.25), transparent 40rem),
+    #edf4f3;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.page-shell {
+  width: min(1200px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 28px 0 40px;
+}
+
+.masthead {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.brand-mark {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  border-radius: 17px;
+  color: #f3fbfa;
+  background: #0c5965;
+  box-shadow: 0 8px 18px rgba(11, 64, 74, 0.16);
+  font-weight: 800;
+  letter-spacing: -0.07em;
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  color: #607c84;
+  font-size: 0.69rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Segoe UI", "Aptos", sans-serif;
+}
+
+h1 {
+  margin: 0;
+  color: #102f3a;
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  letter-spacing: -0.055em;
+}
+
+h1 span {
+  color: #64828a;
+  font-weight: 500;
+}
+
+.clock-card {
+  display: grid;
+  gap: 4px;
+  margin-left: auto;
+  padding: 10px 14px;
+  border: 1px solid #d6e4e3;
+  border-radius: 13px;
+  background: rgba(255, 255, 255, 0.72);
+  text-align: right;
+}
+
+.clock-card span {
+  color: #69818a;
+  font-size: 0.72rem;
+}
+
+.clock-card strong {
+  color: #123b47;
+  font-size: 0.92rem;
+}
+
+.planner-card,
+.graph-card {
+  border: 1px solid #dbe7e5;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 10px 32px rgba(30, 71, 79, 0.055);
+}
+
+.planner-card {
+  padding: 20px 22px 18px;
+}
+
+.planner-toolbar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 22px;
+  margin-bottom: 16px;
+}
+
+.planner-toolbar h2,
+.graph-heading h2 {
+  margin: 0;
+  color: #123b47;
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+  letter-spacing: -0.045em;
+}
+
+.range-caption {
+  margin: 5px 0 0;
+  color: #71858a;
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.controls {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+}
+
+.controls label {
+  display: grid;
+  gap: 5px;
+  color: #6b8288;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.controls input {
+  min-height: 39px;
+  padding: 0 10px;
+  border: 1px solid #d4e0e0;
+  border-radius: 9px;
+  color: #17333d;
+  background: #fbfdfd;
+}
+
+.controls input[type="date"] {
+  min-width: 150px;
+}
+
+.controls input[type="number"] {
+  width: 145px;
+}
+
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.schedule-table thead th {
+  padding: 10px 14px;
+  color: #6b8288;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.schedule-table thead th:last-child,
+.schedule-table .sailing-row td:last-child {
+  text-align: right;
+}
+
+.schedule-table tbody .day-row th {
+  padding: 10px 14px;
+  border-top: 1px solid #e8eeee;
+  color: #1a5863;
+  background: #f2f8f7;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.schedule-table tbody:first-of-type .day-row th {
+  border-top: 0;
+}
+
+.schedule-table .sailing-row td {
+  padding: 13px 14px;
+  border-bottom: 1px solid #edf1f1;
+  color: #244650;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.schedule-table .sailing-row:last-child td {
+  border-bottom: 0;
+}
+
+.schedule-table .sailing-row td:first-child,
+.schedule-table .sailing-row td:nth-child(3) {
+  color: #087e8b;
+  font-weight: 700;
+}
+
+.schedule-message {
+  margin: 0;
+  padding: 18px 14px;
+  border-radius: 11px;
+  color: #58727a;
+  background: #f4f8f7;
+  font-size: 0.88rem;
+}
+
+.error-message {
+  color: #934631;
+  background: #fff5f1;
+}
+
+.graph-card {
+  margin-top: 16px;
+  padding: 20px 22px 16px;
+}
+
+.graph-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.graph-heading .range-caption {
+  max-width: 780px;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 16px 0 6px;
+  color: #60777e;
+  font-size: 0.73rem;
+}
+
+.legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.legend i {
+  display: inline-block;
+  width: 19px;
+  height: 3px;
+  border-radius: 3px;
+}
+
+.legend-line {
+  background: #087e8b;
+}
+
+.legend-window {
+  height: 10px !important;
+  background: rgba(97, 159, 104, 0.38);
+}
+
+.legend-threshold {
+  background: repeating-linear-gradient(90deg, #c35b3b 0 5px, transparent 5px 8px);
+}
+
+.legend-reference {
+  background: repeating-linear-gradient(90deg, #4b8c91 0 2px, transparent 2px 5px);
+}
+
+.legend-now {
+  width: 2px !important;
+  height: 13px;
+  background: #273642;
+}
+
+.chart-wrap {
+  position: relative;
+  min-height: 390px;
+}
+
+.chart {
+  width: 100%;
+  height: 395px;
+}
+
+.loading-overlay,
+.message-overlay {
+  position: absolute;
+  inset: 20px 0 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  color: #5c7379;
+  background: rgba(255, 255, 255, 0.86);
+  text-align: center;
+}
+
+.message-overlay {
+  color: #934631;
+}
+
+footer {
+  max-width: 900px;
+  margin: 14px auto 0;
+  color: #74888d;
+  font-size: 0.73rem;
+  line-height: 1.55;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+@media (max-width: 760px) {
+  .planner-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .controls {
+    width: 100%;
+  }
+
+  .controls label:first-child {
+    flex: 1;
+  }
+}
+
+@media (max-width: 560px) {
+  .page-shell {
+    width: min(100% - 24px, 1200px);
+    padding-top: 16px;
+  }
+
+  .masthead {
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 13px;
+  }
+
+  .brand-mark {
+    width: 42px;
+    height: 42px;
+    border-radius: 13px;
+  }
+
+  .clock-card {
+    margin-left: 52px;
+    padding: 8px 11px;
+    text-align: left;
+  }
+
+  .planner-card,
+  .graph-card {
+    border-radius: 15px;
+    padding: 16px 13px;
+  }
+
+  .controls {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 118px;
+    gap: 8px;
+  }
+
+  .controls input[type="date"],
+  .controls input[type="number"] {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .controls label span {
+    min-height: 2em;
+    line-height: 1.2;
+  }
+
+  .schedule-table thead {
+    display: none;
+  }
+
+  .schedule-table,
+  .schedule-table tbody {
+    display: block;
+    width: 100%;
+  }
+
+  .schedule-table tbody {
+    margin-top: 12px;
+  }
+
+  .schedule-table tbody:first-of-type {
+    margin-top: 0;
+  }
+
+  .schedule-table tbody .day-row,
+  .schedule-table tbody .day-row th {
+    display: block;
+    width: 100%;
+  }
+
+  .schedule-table tbody .day-row th {
+    padding: 9px 10px;
+    border: 0;
+    border-radius: 9px 9px 0 0;
+  }
+
+  .schedule-table .sailing-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid #e4eceb;
+    border-top: 0;
+    background: #fff;
+  }
+
+  .schedule-table .sailing-row:last-child {
+    border-radius: 0 0 9px 9px;
+  }
+
+  .schedule-table .sailing-row td,
+  .schedule-table .sailing-row td:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    border-bottom: 1px solid #edf1f1;
+    font-size: 0.84rem;
+    text-align: left;
+    white-space: normal;
+  }
+
+  .schedule-table .sailing-row td::before {
+    content: attr(data-label);
+    color: #71858a;
+    font-size: 0.67rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  .schedule-table .sailing-row td:nth-last-child(-n + 2) {
+    border-bottom: 0;
+  }
+
+  .graph-card {
+    margin-top: 12px;
+  }
+
+  .legend {
+    gap: 10px 13px;
+    font-size: 0.68rem;
+  }
+
+  .chart {
+    height: 355px;
+  }
+
+  .chart-wrap {
+    min-height: 355px;
+  }
+}

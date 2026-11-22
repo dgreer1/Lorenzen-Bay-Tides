@@ -1,0 +1,22 @@
+{
+  "name": "lorenzen-bay-tide-viewer",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "predev": "python ../scripts/predict_tides.py --output public/data",
+    "dev": "vite --host 0.0.0.0",
+    "prebuild": "python ../scripts/predict_tides.py --output public/data",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0"
+  },
+  "dependencies": {
+    "echarts": "6.1.0",
+    "svelte": "5.59.1"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "5.0.3",
+    "typescript": "5.7.3",
+    "vite": "6.4.6"
+  }
+}
