@@ -28,4 +28,6 @@ The development and production build scripts regenerate the forecast data under 
 
 Published site: <https://dgreer1.github.io/Lorenzen-Bay-Tides/>.
 
+On iPhone, add the site to the Home Screen from Safari's Share menu. If an existing shortcut still shows the old icon, delete the shortcut and add it again.
+
 `.github/workflows/pages.yml` builds and deploys the site on pushes to `main`, and refreshes the rolling forecast daily. It also supports manual runs. Enable **Settings → Pages → Build and deployment → GitHub Actions** once in the repository settings. After that, a push to `main` publishes the site.
